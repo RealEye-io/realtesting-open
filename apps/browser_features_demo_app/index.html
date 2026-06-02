@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealTesting Browser Features Demo</title>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <h1>RealTesting Browser Features Demo</h1>
+        <p class="subtitle">
+          Deterministic fullscreen, popup, and clipboard behavior for automated browser tests.
+        </p>
+      </header>
+
+      <section class="panel">
+        <h2>Fullscreen</h2>
+        <div class="row">
+          <button id="enterFullscreen" type="button">Enter Fullscreen</button>
+          <button id="exitFullscreen" type="button">Exit Fullscreen</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Popups (window.open)</h2>
+        <div class="row">
+          <label for="popupMode">Mode</label>
+          <select id="popupMode">
+            <option value="virtual">virtual</option>
+            <option value="block">block</option>
+            <option value="native">native</option>
+            <option value="prefer-virtual">prefer-virtual</option>
+            <option value="prefer-native">prefer-native</option>
+          </select>
+        </div>
+        <div class="row">
+          <button id="openPopup" type="button">Open Popup</button>
+          <button id="closeLastPopup" type="button">Close Last Popup</button>
+          <button id="closeAllPopups" type="button">Close All Popups</button>
+        </div>
+        <p class="hint">
+          In virtual mode, no real browsing context is created. The returned object is a minimal
+          Window-like handle.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Clipboard</h2>
+        <div class="row">
+          <input id="clipboardInput" type="text" value="Hello from RealTesting" />
+          <button id="copyClipboardApi" type="button">Copy (Clipboard API)</button>
+          <button id="pasteClipboardApi" type="button">Paste (Clipboard API)</button>
+        </div>
+        <div class="row">
+          <input id="execCommandInput" type="text" value="Hello via execCommand" />
+          <button id="copyExecCommand" type="button">Copy (execCommand)</button>
+        </div>
+        <pre id="clipboardReadback" class="readback"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>Status</h2>
+        <pre id="statusText" class="status"></pre>
+        <div id="errorBox" class="error" hidden></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+

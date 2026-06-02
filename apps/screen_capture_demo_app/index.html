@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealTesting Screen Capture Demo</title>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>RealTesting: Screen Capture Demo</h1>
+        <p>
+          This app calls the standard Screen Capture API
+          (<code>navigator.mediaDevices.getDisplayMedia</code>) and can run
+          headlessly when RealTesting virtual capture is enabled.
+        </p>
+      </header>
+
+      <section class="panel">
+        <div class="controls">
+          <button id="startCapture" type="button">Start Capture</button>
+          <button id="stopCapture" type="button" disabled>Stop Capture</button>
+
+          <label class="control">
+            Mode
+            <select id="captureMode">
+              <option value="prefer-native">prefer-native</option>
+              <option value="prefer-virtual">prefer-virtual</option>
+              <option value="native">native</option>
+              <option value="virtual">virtual</option>
+            </select>
+          </label>
+
+          <label class="control">
+            <input id="blockNative" type="checkbox" />
+            Block native getDisplayMedia
+          </label>
+
+          <div class="sources">
+            <span>Virtual source:</span>
+            <button id="sourcePattern" type="button">Pattern</button>
+            <button id="sourceGreen" type="button">Green</button>
+            <button id="sourceRed" type="button">Red</button>
+          </div>
+        </div>
+
+        <div class="status">
+          <div><strong>Status</strong></div>
+          <pre id="statusText">(loading)</pre>
+          <div id="errorBox" class="error" hidden></div>
+        </div>
+      </section>
+
+      <section class="preview">
+        <video id="preview" autoplay muted playsinline></video>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+

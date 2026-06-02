@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealCamera Face Detection Demo</title>
+    <style>
+      body {
+        font-family: "IBM Plex Sans", system-ui, sans-serif;
+        margin: 0;
+        padding: 24px;
+        background: #0b0f14;
+        color: #e7edf3;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .panel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 24px;
+      }
+      video,
+      canvas {
+        width: 100%;
+        border-radius: 12px;
+        background: #111;
+        border: 1px solid #223041;
+      }
+      .status {
+        padding: 12px 16px;
+        background: #111826;
+        border-radius: 12px;
+        border: 1px solid #223041;
+        margin-top: 12px;
+      }
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 16px;
+      }
+      .controls--stack {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .controls button {
+        border: 1px solid #2a3748;
+        background: #111826;
+        color: #e7edf3;
+        border-radius: 999px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .controls select {
+        border: 1px solid #2a3748;
+        background: #111826;
+        color: #e7edf3;
+        border-radius: 12px;
+        padding: 8px 12px;
+        font-size: 14px;
+        min-width: 220px;
+      }
+      .controls button.active {
+        border-color: #30e0a1;
+        color: #30e0a1;
+      }
+      .controls button:hover {
+        border-color: #4b5c72;
+      }
+      .status.status--error {
+        border-color: #ef4444;
+        background: rgba(239, 68, 68, 0.12);
+        color: #fecaca;
+      }
+      #faceSource {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>RealCamera Face Detection Demo</h1>
+      <p>
+        This page validates the RealCamera virtual webcam stream by running MediaPipe
+        Face Detector on a deterministic face fixture.
+      </p>
+      <div class="status" id="status">Booting…</div>
+      <div class="controls" aria-label="Source selection">
+        <button type="button" id="useVirtual">Use Virtual Camera</button>
+        <button type="button" id="usePhysical">Use Real Webcam</button>
+      </div>
+      <div class="controls" id="virtualControls" aria-label="Virtual camera controls">
+        <button type="button" id="showFace">Show Face</button>
+        <button type="button" id="showNoFace">Show No Face</button>
+      </div>
+      <div
+        class="controls controls--stack"
+        id="physicalControls"
+        aria-label="Physical camera controls"
+      >
+        <div class="controls" style="margin-top: 0;">
+          <select id="physicalSelect" aria-label="Real webcam selection">
+            <option value="">Select a real webcam</option>
+          </select>
+          <button type="button" id="refreshPhysical">Refresh Devices</button>
+          <button type="button" id="requestPhysical">Request Access</button>
+          <button type="button" id="startPhysical">Start Real Webcam</button>
+        </div>
+      </div>
+      <div class="panel">
+        <div>
+          <h3>Virtual Camera Feed</h3>
+          <video id="virtualVideo" autoplay muted playsinline></video>
+        </div>
+        <div>
+          <h3>Detection Preview</h3>
+          <canvas id="overlay" width="640" height="480"></canvas>
+        </div>
+      </div>
+      <img id="faceSource" src="/fixtures/face.jpg" alt="Face fixture" />
+    </main>
+    <script type="module" src="/src/face-demo.ts"></script>
+  </body>
+</html>

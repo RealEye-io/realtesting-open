@@ -1,0 +1,26 @@
+{
+  "name": "@realeye/realtesting-screen-capture",
+  "version": "1.0.0",
+  "description": "Screen capture emulation via getDisplayMedia for automated testing",
+  "homepage": "https://github.com/RealEye-io/realtesting-open#screen-capture",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RealEye-io/realtesting-open.git",
+    "directory": "packages/screen_capture"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false
+}

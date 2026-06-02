@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealCamera Devtools</title>
+    <style>
+      body {
+        font-family: "IBM Plex Sans", system-ui, sans-serif;
+        margin: 0;
+        padding: 24px;
+        background: #0b1116;
+        color: #f2f5f8;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .device-list {
+        margin-top: 16px;
+        padding: 12px;
+        background: #111826;
+        border-radius: 12px;
+        border: 1px solid #223041;
+        font-size: 14px;
+        white-space: pre-wrap;
+      }
+      .device-list.status--error {
+        border-color: #ef4444;
+        background: rgba(239, 68, 68, 0.12);
+        color: #fecaca;
+      }
+      .controls {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+      }
+      select,
+      button {
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 1px solid #243244;
+        background: #131c26;
+        color: inherit;
+      }
+      video {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid #243244;
+        background: #0f141b;
+      }
+      .devtools {
+        margin-top: 24px;
+        padding: 16px;
+        border-radius: 12px;
+        border: 1px solid #223041;
+        background: #0f1622;
+      }
+      .devtools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        margin-top: 12px;
+      }
+      .devtools label {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 13px;
+      }
+      .devtools input,
+      .devtools select,
+      .devtools button {
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 1px solid #243244;
+        background: #131c26;
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>RealCamera Devtools Page</h1>
+      <p>
+        Use this page to configure virtual cameras, swap sources, and simulate disconnects.
+      </p>
+      <div class="controls">
+        <select id="deviceSelect"></select>
+        <button id="refreshDevices">Refresh Devices</button>
+        <button id="requestPermission">Request Physical Access</button>
+        <button id="togglePhysical">Disable Physical Devices</button>
+        <button id="startStream">Start Stream</button>
+      </div>
+      <video id="preview" autoplay muted playsinline></video>
+      <div class="device-list" id="status">Ready.</div>
+      <div class="device-list" id="deviceList">No devices loaded.</div>
+      <section class="devtools" id="devtoolsPanel">
+        <h2>Virtual Camera Devtools</h2>
+        <div class="devtools-grid">
+          <label>
+            Virtual Device
+            <select id="virtualSelect"></select>
+          </label>
+          <label>
+            Width
+            <input id="virtualWidth" type="number" min="64" max="1920" />
+          </label>
+          <label>
+            Height
+            <input id="virtualHeight" type="number" min="64" max="1080" />
+          </label>
+          <label>
+            FPS
+            <input id="virtualFps" type="number" min="1" max="60" />
+          </label>
+          <button id="applyVirtualParams">Apply Params</button>
+          <button id="toggleVirtual">Disconnect</button>
+          <label>
+            Replace Image
+            <input id="virtualImage" type="file" accept="image/*" />
+          </label>
+          <label>
+            Solid Color
+            <input id="virtualColor" type="color" value="#1f6feb" />
+          </label>
+          <button id="applyVirtualColor">Use Color</button>
+          <button id="applyTestPattern">Use Test Pattern</button>
+        </div>
+      </section>
+    </main>
+    <script>
+      window.__REALCAMERA_DEVTOOLS__ = true;
+      window.__REALCAMERA_DEVTOOLS_PAGE__ = true;
+    </script>
+    <script type="module" src="/src/proxy-demo.ts"></script>
+  </body>
+</html>

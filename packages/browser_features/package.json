@@ -1,0 +1,26 @@
+{
+  "name": "@realeye/realtesting-browser-features",
+  "version": "1.0.0",
+  "description": "Browser features emulation (fullscreen, popups, clipboard) for automated testing",
+  "homepage": "https://github.com/RealEye-io/realtesting-open#browser-features",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RealEye-io/realtesting-open.git",
+    "directory": "packages/browser_features"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false
+}

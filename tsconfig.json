@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@realeye/realcamera": ["packages/realcamera/src/index.ts"],
+      "@realeye/realtesting-screen-capture": ["packages/screen_capture/src/index.ts"],
+      "@realeye/realtesting-browser-features": ["packages/browser_features/src/index.ts"],
+      "@realeye/realtesting-webrtc": ["packages/webrtc/src/index.ts"],
+      "@realeye/realtesting-websocket": ["packages/websocket/src/index.ts"]
+    },
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["node", "vitest/globals", "vite/client"]
+  },
+  "include": ["packages/**/*", "apps/**/*", "tests/**/*"]
+}

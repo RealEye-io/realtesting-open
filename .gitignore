@@ -1,0 +1,12 @@
+node_modules/
+# Ignore generated build outputs by default, but keep committed package artifacts.
+# RealTesting packages publish from packages/*/dist and verify them with
+# `npm run verify:dist`, so package dist output must stay tracked.
+dist/
+!packages/*/dist/
+!packages/*/dist/**
+test-results/
+playwright-report/
+*.log
+*.tsbuildinfo
+

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealTesting WebRTC Demo</title>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>RealTesting WebRTC Emulator</h1>
+        <p>
+          Deterministic <code>RTCPeerConnection</code> + <code>RTCDataChannel</code> for headless E2E.
+        </p>
+      </header>
+
+      <section class="panel">
+        <div class="controls">
+          <button id="connectPeers">Connect Peers</button>
+          <button id="disconnectPeers" disabled>Disconnect</button>
+
+          <label class="control">
+            Mode
+            <select id="rtcMode">
+              <option value="prefer-native">prefer-native</option>
+              <option value="prefer-virtual">prefer-virtual</option>
+              <option value="native">native</option>
+              <option value="virtual">virtual</option>
+            </select>
+          </label>
+
+          <label class="control">
+            <input id="blockNative" type="checkbox" />
+            Block Native <code>RTCPeerConnection</code>
+          </label>
+
+          <div class="control">
+            <input id="messageInput" type="text" placeholder="Message (A -> B)" />
+            <button id="sendMessage" disabled>Send</button>
+          </div>
+        </div>
+
+        <div class="status">
+          <div id="errorBox" class="error" hidden></div>
+          <pre id="statusText">{}</pre>
+          <pre id="logText"></pre>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+

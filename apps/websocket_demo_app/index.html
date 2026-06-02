@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealTesting WebSocket Demo</title>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>RealTesting WebSocket Emulator</h1>
+        <p>Deterministic <code>WebSocket</code> endpoints for headless E2E.</p>
+      </header>
+
+      <section class="panel">
+        <div class="controls">
+          <button id="connectSocket">Connect</button>
+          <button id="disconnectSocket" disabled>Disconnect</button>
+
+          <label class="control">
+            Mode
+            <select id="socketMode">
+              <option value="prefer-native">prefer-native</option>
+              <option value="prefer-virtual">prefer-virtual</option>
+              <option value="native">native</option>
+              <option value="virtual">virtual</option>
+            </select>
+          </label>
+
+          <label class="control">
+            <input id="blockNative" type="checkbox" />
+            Block Native <code>WebSocket</code>
+          </label>
+
+          <div class="control">
+            <input id="messageInput" type="text" placeholder="Message to echo" />
+            <button id="sendMessage" disabled>Send</button>
+          </div>
+
+          <div class="control">
+            <button id="resetServers">Reset Echo Server</button>
+            <span class="hint"><code>ws://realtesting.local/echo</code></span>
+          </div>
+        </div>
+
+        <div class="status">
+          <div id="errorBox" class="error" hidden></div>
+          <pre id="statusText">{}</pre>
+          <pre id="logText"></pre>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
