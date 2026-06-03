@@ -1,6 +1,6 @@
 {
   "name": "realtesting-screen-capture-demo",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "version": "1.0.1"
 }
-

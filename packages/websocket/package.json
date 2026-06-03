@@ -1,6 +1,6 @@
 {
   "name": "@realeye-io/realtesting-websocket",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WebSocket emulation for automated browser testing",
   "homepage": "https://github.com/RealEye-io/realtesting-open#websocket",
   "repository": {
