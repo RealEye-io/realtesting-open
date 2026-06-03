@@ -1,52 +1,55 @@
-# RealTesting - Browser API Emulation for Automated Testing
+# RealTesting — Browser API Emulation for Automated Testing
 
-[![npm version](https://badge.fury.io/js/@realeye-io/realtesting-screen-capture.svg)](https://badge.fury.io/js/@realeye-io/realtesting-screen-capture)
+[![screen-capture](https://img.shields.io/npm/v/@realeye-io/realtesting-screen-capture?label=screen-capture)](https://www.npmjs.com/package/@realeye-io/realtesting-screen-capture)
+[![browser-features](https://img.shields.io/npm/v/@realeye-io/realtesting-browser-features?label=browser-features)](https://www.npmjs.com/package/@realeye-io/realtesting-browser-features)
+[![camera](https://img.shields.io/npm/v/@realeye-io/realtesting-camera?label=camera)](https://www.npmjs.com/package/@realeye-io/realtesting-camera)
+[![webrtc](https://img.shields.io/npm/v/@realeye-io/realtesting-webrtc?label=webrtc)](https://www.npmjs.com/package/@realeye-io/realtesting-webrtc)
+[![websocket](https://img.shields.io/npm/v/@realeye-io/realtesting-websocket?label=websocket)](https://www.npmjs.com/package/@realeye-io/realtesting-websocket)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 RealTesting is a TypeScript library that provides deterministic, automation-friendly emulation for browser JavaScript APIs. It enables fully automated, headless end-to-end tests without interactive prompts or requiring local hardware.
 
-This library is the test infrastructure behind [RealEye.io](https://www.realeye.io/), an online research platform that uses [webcam eye-tracking](https://www.realeye.io/features/online-webcam-eyetracking), [screen recording](https://www.realeye.io/features/online-webcam-eyetracking), [hosted sessions](https://www.realeye.io/features/online-webcam-eyetracking), and more. RealTesting ensures every feature ships with comprehensive, deterministic automated testing — from virtual camera streams to in-memory WebRTC connections.
+> **Behind RealEye.io** — This library powers the test infrastructure for [RealEye.io](https://www.realeye.io/), an online research platform for [webcam eye-tracking](https://www.realeye.io/features/online-webcam-eyetracking), [screen recording](https://www.realeye.io/features/online-webcam-eyetracking), [hosted sessions](https://www.realeye.io/features/online-webcam-eyetracking), and more.
 
-## 📦 NPM Packages
+## 📦 Packages
 
-RealTesting is available as five separate packages on npm:
+Five packages on npm — install only what you need:
 
 | Package | Description | Install |
 |---------|-------------|---------|
-| [@realeye-io/realtesting-screen-capture](https://www.npmjs.com/package/@realeye-io/realtesting-screen-capture) | Screen capture emulation (`getDisplayMedia`) — powers [Screen Recording](https://www.realeye.io/features/online-webcam-eyetracking) | `npm install @realeye-io/realtesting-screen-capture` |
-| [@realeye-io/realtesting-browser-features](https://www.npmjs.com/package/@realeye-io/realtesting-browser-features) | Browser features (fullscreen, popups, clipboard) — supports [How RealEye works?](https://www.realeye.io/features/online-webcam-eyetracking) | `npm install @realeye-io/realtesting-browser-features` |
-| [@realeye-io/realtesting-camera](https://www.npmjs.com/package/@realeye-io/realtesting-camera) | Virtual webcam emulation (`getUserMedia`) — powers [webcam eye-tracking](https://www.realeye.io/features/online-webcam-eyetracking) | `npm install @realeye-io/realtesting-camera` |
-| [@realeye-io/realtesting-webrtc](https://www.npmjs.com/package/@realeye-io/realtesting-webrtc) | In-memory WebRTC (`RTCPeerConnection`) — powers [Hosted Sessions](https://www.realeye.io/features/online-webcam-eyetracking) | `npm install @realeye-io/realtesting-webrtc` |
-| [@realeye-io/realtesting-websocket](https://www.npmjs.com/package/@realeye-io/realtesting-websocket) | Virtual WebSocket servers — powers [Hosted Sessions](https://www.realeye.io/features/online-webcam-eyetracking) real-time communication | `npm install @realeye-io/realtesting-websocket` |
+| [@realeye-io/realtesting-camera](https://www.npmjs.com/package/@realeye-io/realtesting-camera) | Virtual webcam (`getUserMedia`) | `npm i @realeye-io/realtesting-camera` |
+| [@realeye-io/realtesting-screen-capture](https://www.npmjs.com/package/@realeye-io/realtesting-screen-capture) | Screen capture (`getDisplayMedia`) | `npm i @realeye-io/realtesting-screen-capture` |
+| [@realeye-io/realtesting-browser-features](https://www.npmjs.com/package/@realeye-io/realtesting-browser-features) | Fullscreen, popups, clipboard | `npm i @realeye-io/realtesting-browser-features` |
+| [@realeye-io/realtesting-webrtc](https://www.npmjs.com/package/@realeye-io/realtesting-webrtc) | In-memory WebRTC (`RTCPeerConnection`) | `npm i @realeye-io/realtesting-webrtc` |
+| [@realeye-io/realtesting-websocket](https://www.npmjs.com/package/@realeye-io/realtesting-websocket) | Virtual WebSocket servers | `npm i @realeye-io/realtesting-websocket` |
 
 ## 🚀 Quick Start
 
-### 1. Install the packages you need
+### 1. Install
 
 ```bash
 npm install @realeye-io/realtesting-camera @realeye-io/realtesting-screen-capture
 ```
 
-### 2. Initialize in your HTML/JS
+### 2. Install emulators in your app
 
 ```html
 <script type="module">
 import { RealCamera } from '@realeye-io/realtesting-camera';
 import { RealScreenCapture } from '@realeye-io/realtesting-screen-capture';
 
-// Install the emulators
+// Patch standard browser APIs with virtual implementations
 RealCamera.install();
 RealScreenCapture.install();
 
-// Now you can use standard browser APIs
+// Standard APIs now work without hardware or user prompts
 const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-// This will use the virtual camera instead of real hardware
 </script>
 ```
 
-### 3. Use in your tests
+### 3. Run in tests
 
-With RealTesting installed, your existing code that uses browser APIs will work in automated tests:
+Your existing application code works unchanged — the emulators intercept standard API calls:
 
 ```typescript
 // Your application code (unchanged)
@@ -56,10 +59,10 @@ const screenStream = await navigator.mediaDevices.getDisplayMedia({ video: true 
 
 ## 🎯 Use Cases
 
-- **Automated E2E Testing**: Test screen recording and camera features in CI/CD pipelines
-- **Headless Browser Testing**: Use with Playwright, Puppeteer, or other headless browsers
-- **CI/CD Integration**: No hardware dependencies for camera/screen capture tests
-- **Deterministic Testing**: Consistent virtual device behavior across test runs
+- **Automated E2E Testing** — Test camera and screen recording features in CI/CD
+- **Headless Browser Support** — Works with Playwright, Puppeteer, or other headless browsers
+- **CI/CD Integration** — No hardware or interactive permission prompts required
+- **Deterministic Testing** — Consistent virtual device behavior across runs
 
 ## Principles
 
