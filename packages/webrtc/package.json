@@ -1,6 +1,6 @@
 {
   "name": "@realeye-io/realtesting-webrtc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "WebRTC emulation (RTCPeerConnection) for automated testing",
   "homepage": "https://github.com/RealEye-io/realtesting-open#webrtc",
   "repository": {
@@ -20,7 +20,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "sideEffects": false
 }

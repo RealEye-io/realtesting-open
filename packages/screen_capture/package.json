@@ -1,6 +1,6 @@
 {
   "name": "@realeye-io/realtesting-screen-capture",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Screen capture emulation via getDisplayMedia for automated testing",
   "homepage": "https://github.com/RealEye-io/realtesting-open#screen-capture",
   "repository": {
@@ -20,7 +20,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "sideEffects": false
 }

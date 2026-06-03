@@ -1,6 +1,6 @@
 {
   "name": "@realeye-io/realtesting-browser-features",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Browser features emulation (fullscreen, popups, clipboard) for automated testing",
   "homepage": "https://github.com/RealEye-io/realtesting-open#browser-features",
   "repository": {
@@ -20,7 +20,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "sideEffects": false
 }

@@ -5,7 +5,7 @@
 
 RealTesting is a TypeScript library that provides deterministic, automation-friendly emulation for browser JavaScript APIs. It enables fully automated, headless end-to-end tests without interactive prompts or requiring local hardware.
 
-This library is the test infrastructure behind [RealEye.io](https://www.realeye.io/), an online research platform that uses [webcam eye-tracking](https://support.realeye.io/how-realeye-works), [screen recording](https://support.realeye.io/website-testing-best-practices), [hosted sessions](https://support.realeye.io/hosted-sessions), and more. RealTesting ensures every feature ships with comprehensive, deterministic automated testing — from virtual camera streams to in-memory WebRTC connections.
+This library is the test infrastructure behind [RealEye.io](https://www.realeye.io/), an online research platform that uses [webcam eye-tracking](https://www.realeye.io/features/online-webcam-eyetracking), [screen recording](https://www.realeye.io/features/online-webcam-eyetracking), [hosted sessions](https://www.realeye.io/features/online-webcam-eyetracking), and more. RealTesting ensures every feature ships with comprehensive, deterministic automated testing — from virtual camera streams to in-memory WebRTC connections.
 
 ## 📦 NPM Packages
 
@@ -13,11 +13,11 @@ RealTesting is available as five separate packages on npm:
 
 | Package | Description | Install |
 |---------|-------------|---------|
-| [@realeye-io/realtesting-screen-capture](https://www.npmjs.com/package/@realeye-io/realtesting-screen-capture) | Screen capture emulation (`getDisplayMedia`) — powers [Screen Recording](https://support.realeye.io/website-testing-best-practices) | `npm install @realeye-io/realtesting-screen-capture` |
-| [@realeye-io/realtesting-browser-features](https://www.npmjs.com/package/@realeye-io/realtesting-browser-features) | Browser features (fullscreen, popups, clipboard) — supports [How RealEye works?](https://support.realeye.io/how-realeye-works) | `npm install @realeye-io/realtesting-browser-features` |
-| [@realeye-io/realtesting-camera](https://www.npmjs.com/package/@realeye-io/realtesting-camera) | Virtual webcam emulation (`getUserMedia`) — powers [webcam eye-tracking](https://support.realeye.io/how-realeye-works) | `npm install @realeye-io/realtesting-camera` |
-| [@realeye-io/realtesting-webrtc](https://www.npmjs.com/package/@realeye-io/realtesting-webrtc) | In-memory WebRTC (`RTCPeerConnection`) — powers [Hosted Sessions](https://support.realeye.io/hosted-sessions) | `npm install @realeye-io/realtesting-webrtc` |
-| [@realeye-io/realtesting-websocket](https://www.npmjs.com/package/@realeye-io/realtesting-websocket) | Virtual WebSocket servers — powers [Hosted Sessions](https://support.realeye.io/hosted-sessions) real-time communication | `npm install @realeye-io/realtesting-websocket` |
+| [@realeye-io/realtesting-screen-capture](https://www.npmjs.com/package/@realeye-io/realtesting-screen-capture) | Screen capture emulation (`getDisplayMedia`) — powers [Screen Recording](https://www.realeye.io/features/online-webcam-eyetracking) | `npm install @realeye-io/realtesting-screen-capture` |
+| [@realeye-io/realtesting-browser-features](https://www.npmjs.com/package/@realeye-io/realtesting-browser-features) | Browser features (fullscreen, popups, clipboard) — supports [How RealEye works?](https://www.realeye.io/features/online-webcam-eyetracking) | `npm install @realeye-io/realtesting-browser-features` |
+| [@realeye-io/realtesting-camera](https://www.npmjs.com/package/@realeye-io/realtesting-camera) | Virtual webcam emulation (`getUserMedia`) — powers [webcam eye-tracking](https://www.realeye.io/features/online-webcam-eyetracking) | `npm install @realeye-io/realtesting-camera` |
+| [@realeye-io/realtesting-webrtc](https://www.npmjs.com/package/@realeye-io/realtesting-webrtc) | In-memory WebRTC (`RTCPeerConnection`) — powers [Hosted Sessions](https://www.realeye.io/features/online-webcam-eyetracking) | `npm install @realeye-io/realtesting-webrtc` |
+| [@realeye-io/realtesting-websocket](https://www.npmjs.com/package/@realeye-io/realtesting-websocket) | Virtual WebSocket servers — powers [Hosted Sessions](https://www.realeye.io/features/online-webcam-eyetracking) real-time communication | `npm install @realeye-io/realtesting-websocket` |
 
 ## 🚀 Quick Start
 
