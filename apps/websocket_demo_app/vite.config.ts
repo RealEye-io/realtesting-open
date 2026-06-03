@@ -8,7 +8,7 @@ export default defineConfig({
   publicDir: path.resolve(root, "public"),
   resolve: {
     alias: {
-      "@realeye/realtesting-websocket": path.resolve(
+      "@realeye-io/realtesting-websocket": path.resolve(
         root,
         "../../packages/websocket/src"
       ),

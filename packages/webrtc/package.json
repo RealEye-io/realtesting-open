@@ -1,5 +1,5 @@
 {
-  "name": "@realeye/realtesting-webrtc",
+  "name": "@realeye-io/realtesting-webrtc",
   "version": "1.0.0",
   "description": "WebRTC emulation (RTCPeerConnection) for automated testing",
   "homepage": "https://github.com/RealEye-io/realtesting-open#webrtc",

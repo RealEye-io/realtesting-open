@@ -4,7 +4,7 @@ import {
   RealScreenCapture,
   type CaptureMode,
   type VirtualFrameSource,
-} from "@realeye/realtesting-screen-capture";
+} from "@realeye-io/realtesting-screen-capture";
 
 const startButton = document.getElementById("startCapture") as HTMLButtonElement | null;
 const stopButton = document.getElementById("stopCapture") as HTMLButtonElement | null;

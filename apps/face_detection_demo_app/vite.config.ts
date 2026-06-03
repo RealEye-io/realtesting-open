@@ -57,7 +57,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@realeye/realcamera": path.resolve(
+      "@realeye-io/realcamera": path.resolve(
         root,
         "../../packages/realcamera/src"
       ),

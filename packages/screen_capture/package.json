@@ -1,5 +1,5 @@
 {
-  "name": "@realeye/realtesting-screen-capture",
+  "name": "@realeye-io/realtesting-screen-capture",
   "version": "1.0.0",
   "description": "Screen capture emulation via getDisplayMedia for automated testing",
   "homepage": "https://github.com/RealEye-io/realtesting-open#screen-capture",

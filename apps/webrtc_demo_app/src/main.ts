@@ -1,6 +1,6 @@
 import "./../style.css";
 
-import { RealWebRTC, type WebRtcMode } from "@realeye/realtesting-webrtc";
+import { RealWebRTC, type WebRtcMode } from "@realeye-io/realtesting-webrtc";
 
 const connectButton = document.getElementById("connectPeers") as HTMLButtonElement | null;
 const disconnectButton = document.getElementById("disconnectPeers") as HTMLButtonElement | null;

@@ -8,7 +8,7 @@ export default defineConfig({
   publicDir: path.resolve(root, "public"),
   resolve: {
     alias: {
-      "@realeye/realtesting-webrtc": path.resolve(root, "../../packages/webrtc/src"),
+      "@realeye-io/realtesting-webrtc": path.resolve(root, "../../packages/webrtc/src"),
     },
   },
   server: {

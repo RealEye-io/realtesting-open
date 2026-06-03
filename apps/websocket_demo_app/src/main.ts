@@ -1,6 +1,6 @@
 import "./../style.css";
 
-import { RealWebSocket, type WebSocketMode } from "@realeye/realtesting-websocket";
+import { RealWebSocket, type WebSocketMode } from "@realeye-io/realtesting-websocket";
 
 const ECHO_URL = "ws://realtesting.local/echo";
 

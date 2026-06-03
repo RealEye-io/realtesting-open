@@ -1,5 +1,5 @@
 {
-  "name": "@realeye/realtesting-browser-features",
+  "name": "@realeye-io/realtesting-browser-features",
   "version": "1.0.0",
   "description": "Browser features emulation (fullscreen, popups, clipboard) for automated testing",
   "homepage": "https://github.com/RealEye-io/realtesting-open#browser-features",

@@ -8,7 +8,7 @@ export default defineConfig({
   publicDir: path.resolve(root, "public"),
   resolve: {
     alias: {
-      "@realeye/realtesting-browser-features": path.resolve(
+      "@realeye-io/realtesting-browser-features": path.resolve(
         root,
         "../../packages/browser_features/src"
       ),

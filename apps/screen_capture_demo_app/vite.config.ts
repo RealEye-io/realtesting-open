@@ -8,7 +8,7 @@ export default defineConfig({
   publicDir: path.resolve(root, "public"),
   resolve: {
     alias: {
-      "@realeye/realtesting-screen-capture": path.resolve(
+      "@realeye-io/realtesting-screen-capture": path.resolve(
         root,
         "../../packages/screen_capture/src"
       ),

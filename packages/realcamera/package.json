@@ -1,5 +1,5 @@
 {
-  "name": "@realeye/realcamera",
+  "name": "@realeye-io/realcamera",
   "version": "1.0.0",
   "description": "Virtual webcam emulation for automated browser testing",
   "homepage": "https://github.com/RealEye-io/realtesting-open#realcamera",

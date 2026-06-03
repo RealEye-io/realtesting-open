@@ -1,5 +1,5 @@
 {
-  "name": "@realeye/realtesting-workspace",
+  "name": "@realeye-io/realtesting-workspace",
   "private": true,
   "description": "Browser API emulation for fully automated end-to-end tests",
   "homepage": "https://github.com/RealEye-io/realtesting-open#readme",

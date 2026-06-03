@@ -18,6 +18,6 @@ describe("RealCamera scaffold", () => {
 
   it("RealCamera package metadata is present", () => {
     const pkg = fs.readFileSync(path.join(projectRoot, "packages/realcamera/package.json"), "utf8");
-    expect(pkg).toContain('"name": "@realeye/realcamera"');
+    expect(pkg).toContain('"name": "@realeye-io/realcamera"');
   });
 });

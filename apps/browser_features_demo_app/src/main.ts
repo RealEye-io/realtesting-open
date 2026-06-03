@@ -3,7 +3,7 @@ import "./../style.css";
 import {
   RealBrowserFeatures,
   type PopupMode,
-} from "@realeye/realtesting-browser-features";
+} from "@realeye-io/realtesting-browser-features";
 
 const enterFullscreenButton = document.getElementById("enterFullscreen") as HTMLButtonElement | null;
 const exitFullscreenButton = document.getElementById("exitFullscreen") as HTMLButtonElement | null;

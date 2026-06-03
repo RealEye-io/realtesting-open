@@ -1,5 +1,5 @@
 import { FaceDetector, FilesetResolver } from "@mediapipe/tasks-vision";
-import { RealCamera } from "@realeye/realcamera";
+import { RealCamera } from "@realeye-io/realcamera";
 
 declare global {
   interface Window {
