@@ -11,13 +11,13 @@ function fileExists(relativePath: string): boolean {
 describe("RealCamera scaffold", () => {
   it("includes required files", () => {
     expect(fileExists("README.md")).toBe(true);
-    expect(fileExists("packages/realcamera/src/index.ts")).toBe(true);
+    expect(fileExists("packages/camera/src/index.ts")).toBe(true);
     expect(fileExists("apps/webcam_proxy_demo_app/index.html")).toBe(true);
     expect(fileExists("apps/face_detection_demo_app/index.html")).toBe(true);
   });
 
   it("RealCamera package metadata is present", () => {
-    const pkg = fs.readFileSync(path.join(projectRoot, "packages/realcamera/package.json"), "utf8");
-    expect(pkg).toContain('"name": "@realeye-io/realcamera"');
+    const pkg = fs.readFileSync(path.join(projectRoot, "packages/camera/package.json"), "utf8");
+    expect(pkg).toContain('"name": "@realeye-io/realtesting-camera"');
   });
 });

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { DeviceRegistry } from "../../packages/realcamera/src/core/DeviceRegistry";
+import { DeviceRegistry } from "../../packages/camera/src/core/DeviceRegistry";
 
 describe("DeviceRegistry", () => {
   it("adds and lists virtual devices", () => {

@@ -6,11 +6,11 @@
     "moduleResolution": "Bundler",
     "baseUrl": ".",
     "paths": {
-      "@realeye-io/realcamera": ["packages/realcamera/src/index.ts"],
       "@realeye-io/realtesting-screen-capture": ["packages/screen_capture/src/index.ts"],
       "@realeye-io/realtesting-browser-features": ["packages/browser_features/src/index.ts"],
       "@realeye-io/realtesting-webrtc": ["packages/webrtc/src/index.ts"],
-      "@realeye-io/realtesting-websocket": ["packages/websocket/src/index.ts"]
+      "@realeye-io/realtesting-websocket": ["packages/websocket/src/index.ts"],
+      "@realeye-io/realtesting-camera": ["packages/camera/src/index.ts"]
     },
     "strict": true,
     "skipLibCheck": true,

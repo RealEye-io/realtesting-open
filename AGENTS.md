@@ -15,7 +15,7 @@ Project documentation lives in `README.md`.
 
 ## Workspace Structure
 - **`packages/*`** — Library packages. Built with `tsup` (esm + cjs + dts). `dist/` is committed.
-  - `screen_capture`, `browser_features`, `realcamera`, `webrtc`, `websocket`
+  - `screen_capture`, `browser_features`, `camera`, `webrtc`, `websocket`
 - **`apps/*`** — Demo apps. Each uses a fixed port (4173–4178) and calls only standard browser APIs.
 - **`tests/*`** — E2E tests (Playwright). Unit tests are co-located near source where needed.
 

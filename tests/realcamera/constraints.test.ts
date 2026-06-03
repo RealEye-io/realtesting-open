@@ -3,7 +3,7 @@ import {
   applyVideoConstraintsOverride,
   extractDeviceId,
   resolveVideoConstraints,
-} from "../../packages/realcamera/src/utils/constraints";
+} from "../../packages/camera/src/utils/constraints";
 
 describe("constraints helpers", () => {
   it("resolves video constraints with defaults", () => {

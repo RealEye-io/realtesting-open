@@ -15,7 +15,7 @@ RealTesting is available as five separate packages on npm:
 |---------|-------------|---------|
 | [@realeye-io/realtesting-screen-capture](https://www.npmjs.com/package/@realeye-io/realtesting-screen-capture) | Screen capture emulation (`getDisplayMedia`) — powers [Screen Recording](https://support.realeye.io/website-testing-best-practices) | `npm install @realeye-io/realtesting-screen-capture` |
 | [@realeye-io/realtesting-browser-features](https://www.npmjs.com/package/@realeye-io/realtesting-browser-features) | Browser features (fullscreen, popups, clipboard) — supports [How RealEye works?](https://support.realeye.io/how-realeye-works) | `npm install @realeye-io/realtesting-browser-features` |
-| [@realeye-io/realcamera](https://www.npmjs.com/package/@realeye-io/realcamera) | Virtual webcam emulation (`getUserMedia`) — powers [webcam eye-tracking](https://support.realeye.io/how-realeye-works) | `npm install @realeye-io/realcamera` |
+| [@realeye-io/realtesting-camera](https://www.npmjs.com/package/@realeye-io/realtesting-camera) | Virtual webcam emulation (`getUserMedia`) — powers [webcam eye-tracking](https://support.realeye.io/how-realeye-works) | `npm install @realeye-io/realtesting-camera` |
 | [@realeye-io/realtesting-webrtc](https://www.npmjs.com/package/@realeye-io/realtesting-webrtc) | In-memory WebRTC (`RTCPeerConnection`) — powers [Hosted Sessions](https://support.realeye.io/hosted-sessions) | `npm install @realeye-io/realtesting-webrtc` |
 | [@realeye-io/realtesting-websocket](https://www.npmjs.com/package/@realeye-io/realtesting-websocket) | Virtual WebSocket servers — powers [Hosted Sessions](https://support.realeye.io/hosted-sessions) real-time communication | `npm install @realeye-io/realtesting-websocket` |
 
@@ -24,14 +24,14 @@ RealTesting is available as five separate packages on npm:
 ### 1. Install the packages you need
 
 ```bash
-npm install @realeye-io/realcamera @realeye-io/realtesting-screen-capture
+npm install @realeye-io/realtesting-camera @realeye-io/realtesting-screen-capture
 ```
 
 ### 2. Initialize in your HTML/JS
 
 ```html
 <script type="module">
-import { RealCamera } from '@realeye-io/realcamera';
+import { RealCamera } from '@realeye-io/realtesting-camera';
 import { RealScreenCapture } from '@realeye-io/realtesting-screen-capture';
 
 // Install the emulators

@@ -1,4 +1,4 @@
-import { RealCamera } from "@realeye-io/realcamera";
+import { RealCamera } from "@realeye-io/realtesting-camera";
 
 const deviceSelect = document.getElementById("deviceSelect") as HTMLSelectElement | null;
 const refreshButton = document.getElementById("refreshDevices") as HTMLButtonElement | null;

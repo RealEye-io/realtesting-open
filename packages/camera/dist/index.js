@@ -1,4 +1,30 @@
-// packages/realcamera/src/utils/id.ts
+"use strict";
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// packages/camera/src/index.ts
+var index_exports = {};
+__export(index_exports, {
+  RealCamera: () => RealCamera
+});
+module.exports = __toCommonJS(index_exports);
+
+// packages/camera/src/utils/id.ts
 function generateDeviceId(prefix = "realcamera") {
   if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
     return `${prefix}-${crypto.randomUUID()}`;
@@ -8,7 +34,7 @@ function generateDeviceId(prefix = "realcamera") {
   return `${prefix}-${timestamp}-${random}`;
 }
 
-// packages/realcamera/src/core/DeviceRegistry.ts
+// packages/camera/src/core/DeviceRegistry.ts
 var DEFAULT_CONSTRAINTS = {
   width: 640,
   height: 480,
@@ -84,7 +110,7 @@ var DeviceRegistry = class {
   }
 };
 
-// packages/realcamera/src/utils/constraints.ts
+// packages/camera/src/utils/constraints.ts
 var DEFAULT_CONSTRAINTS2 = {
   width: 640,
   height: 480,
@@ -186,7 +212,7 @@ function toConstraintsObject(constraints) {
   return constraints;
 }
 
-// packages/realcamera/src/core/FrameScheduler.ts
+// packages/camera/src/core/FrameScheduler.ts
 var FrameScheduler = class {
   timerId = null;
   frameIndex = 0;
@@ -225,7 +251,7 @@ var FrameScheduler = class {
   }
 };
 
-// packages/realcamera/src/core/VirtualStream.ts
+// packages/camera/src/core/VirtualStream.ts
 var VirtualStream = class {
   canvas;
   ctx;
@@ -364,7 +390,7 @@ var VirtualStream = class {
   }
 };
 
-// packages/realcamera/src/utils/errors.ts
+// packages/camera/src/utils/errors.ts
 function createDOMError(name, message) {
   if (typeof DOMException !== "undefined") {
     return new DOMException(message, name);
@@ -380,7 +406,7 @@ function notFoundError(message) {
   return createDOMError("NotFoundError", message);
 }
 
-// packages/realcamera/src/utils/realtestingTiming.ts
+// packages/camera/src/utils/realtestingTiming.ts
 var COUNTERS_KEY = "__REALTESTING_TIMING_COUNTERS__";
 function clampRange(range) {
   const minMs = Number.isFinite(range.minMs) ? Math.max(0, Math.floor(range.minMs)) : 0;
@@ -537,7 +563,7 @@ function getRealTestingTiming(_namespace) {
   };
 }
 
-// packages/realcamera/src/core/MediaDevicesProxy.ts
+// packages/camera/src/core/MediaDevicesProxy.ts
 var MediaDevicesProxy = class {
   registry;
   options;
@@ -911,7 +937,7 @@ var MediaDevicesProxy = class {
   }
 };
 
-// packages/realcamera/src/core/RealCameraCore.ts
+// packages/camera/src/core/RealCameraCore.ts
 var DEFAULT_OPTIONS = {
   mode: "proxy",
   virtualPermission: "allow",
@@ -1484,8 +1510,9 @@ var RealCameraCore = class {
   }
 };
 
-// packages/realcamera/src/index.ts
+// packages/camera/src/index.ts
 var RealCamera = new RealCameraCore();
-export {
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
   RealCamera
-};
+});

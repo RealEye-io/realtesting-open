@@ -1,12 +1,12 @@
 {
-  "name": "@realeye-io/realcamera",
-  "version": "1.0.1",
+  "name": "@realeye-io/realtesting-camera",
+  "version": "1.0.2",
   "description": "Virtual webcam emulation for automated browser testing",
   "homepage": "https://github.com/RealEye-io/realtesting-open#realcamera",
   "repository": {
     "type": "git",
     "url": "https://github.com/RealEye-io/realtesting-open.git",
-    "directory": "packages/realcamera"
+    "directory": "packages/camera"
   },
   "license": "MIT",
   "main": "dist/index.js",

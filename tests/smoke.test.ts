@@ -13,7 +13,7 @@ describe("RealTesting scaffold", () => {
     expect(fileExists("README.md")).toBe(true);
     expect(fileExists("packages/screen_capture/src/index.ts")).toBe(true);
     expect(fileExists("packages/browser_features/src/index.ts")).toBe(true);
-    expect(fileExists("packages/realcamera/src/index.ts")).toBe(true);
+    expect(fileExists("packages/camera/src/index.ts")).toBe(true);
     expect(fileExists("packages/webrtc/src/index.ts")).toBe(true);
     expect(fileExists("packages/websocket/src/index.ts")).toBe(true);
     expect(fileExists("apps/browser_features_demo_app/src/main.ts")).toBe(true);
