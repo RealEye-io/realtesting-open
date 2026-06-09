@@ -11,6 +11,8 @@ RealTesting is a TypeScript library that provides deterministic, automation-frie
 
 > **Behind RealEye.io** — This library powers the test infrastructure for [RealEye.io](https://www.realeye.io/), an online research platform for [webcam eye-tracking](https://www.realeye.io/features/online-webcam-eyetracking), [screen recording](https://www.realeye.io/features/online-webcam-eyetracking), [hosted sessions](https://www.realeye.io/features/online-webcam-eyetracking), and more.
 
+> **Used in the wild** — The RealTesting Camera package is used by [webcam-eyetracker-light-open](https://github.com/RealEye-io/webcam-eyetracker-light-open), an open-source webcam eye-tracker that runs entirely in the browser.
+
 ## 📦 Packages
 
 Five packages on npm — install only what you need:
